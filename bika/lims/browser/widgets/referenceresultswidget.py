@@ -138,6 +138,7 @@ class ReferenceResultsView(BikaListingView):
                 'allow_edit': ['result', 'error', 'min', 'max'],
                 'required': [],
             }
+            item['replace']['service'] = "<a href='%s'>%s</a>" % (service.absolute_url(), service.Title())
             items.append(item)
 
         self.categories.sort()
